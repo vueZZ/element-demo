@@ -1,5 +1,3 @@
 <template>
-  <div class="v-hello">
-    hello
-  </div>
+  <z-hello></z-hello>
 </template>

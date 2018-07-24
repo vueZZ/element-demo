@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import vui from 'src/index.js'
+import zeroUI from 'src/index.js'
 
-Vue.use(vui)
+Vue.use(zeroUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -1,4 +1,4 @@
-import Hello from '../packages/hello'
+import Hello from '../packages/hello/index.js'
 
 const components = [
   Hello

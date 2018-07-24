@@ -4,9 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const webpack = require('webpack')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -37,7 +35,8 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     'vendor': ['vue', 'vue-router'],
-    'vui': './examples/src/index.js',
+    'zero-ui': './examples/src/index.js'
+    // 'zero-ui-mobile': './examples/src/mobile.js'
   },
   output: {
     path: path.join(__dirname, '../examples/dist'),
@@ -149,12 +148,15 @@ module.exports = {
     }
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': require('../config/dev.env')
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      chunks: ['manifest', 'vendor', 'vui'],
+      chunks: ['manifest', 'vendor', 'zero-ui'],
       template: 'examples/src/index.html',
       filename: 'index.html',
       inject: true

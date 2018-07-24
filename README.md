@@ -1,8 +1,8 @@
-# element
+# zero-ui（开发中，暂时请勿使用）
 
-> element组件仿写及封装
+> element仿写及组件封装
 
-> 2018-02-18  ——
+> 2018-06-18  ——
 ## Build Setup
 
 ``` bash
