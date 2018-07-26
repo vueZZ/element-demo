@@ -8,7 +8,7 @@ config.entry = {
 
 config.output = {
   filename: './lib/[name].js',
-  library: 'zero-uI',
+  library: 'zero-ui',
   libraryTarget: 'umd'
 }
 

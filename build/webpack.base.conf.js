@@ -36,7 +36,6 @@ module.exports = {
   entry: {
     'vendor': ['vue', 'vue-router'],
     'zero-ui': './examples/src/index.js'
-    // 'zero-ui-mobile': './examples/src/mobile.js'
   },
   output: {
     path: path.join(__dirname, '../examples/dist'),

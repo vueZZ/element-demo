@@ -1,12 +1,17 @@
 <template>
   <div class="z-hello">
-    hello
+    {{ text }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'z-hello'
+  name: 'z-hello',
+  props: {
+    text: {
+      type: String
+    }
+  }
 }
 </script>
 
@@ -15,4 +20,3 @@ export default {
   color: red;
 }
 </style>
-

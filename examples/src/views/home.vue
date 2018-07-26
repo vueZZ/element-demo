@@ -1,3 +1,3 @@
 <template>
-  <z-hello></z-hello>
+  <z-hello text="hello"></z-hello>
 </template>
