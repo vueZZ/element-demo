@@ -1,4 +1,5 @@
 import Hello from '../packages/hello/index.js'
+import preview from '../packages/preview/index.js'
 
 const components = [
   Hello
@@ -10,6 +11,7 @@ const install = function (Vue) {
   components.map(component => {
     Vue.component(component.name, component)
   })
+  Vue.prototype.$preview = preview
 }
 
 /* istanbul ignore next */

@@ -1,0 +1,26 @@
+{
+  "zh-CN": [
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": []
+        },
+        {
+          "groupName": "测试页面",
+          "list": [
+            {
+              "path": "/test",
+              "title": "测试"
+            },
+            {
+              "path": "/hello",
+              "title": "hello"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
