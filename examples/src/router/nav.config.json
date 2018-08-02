@@ -5,7 +5,12 @@
       "groups": [
         {
           "groupName": "Basic",
-          "list": []
+          "list": [
+            {
+              "path": "/preview",
+              "title": "Preview 图片预览"
+            }
+          ]
         },
         {
           "groupName": "测试页面",

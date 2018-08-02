@@ -1,38 +1,46 @@
 <template>
   <div>
     <h2>test</h2>
-    <z-hello text="hello"></z-hello>
-    <img src="http://img07.tooopen.com/images/20170316/tooopen_sy_201956178977.jpg" alt="" @click="showImg">
+    <children v-bind.sync="data.n"></children>
+    父：{{ data }}
+    <button @click="add">add</button>
   </div>
 </template>
 
 <script>
+import children from './children.vue'
 export default {
-  directives: {
-    focus: {
-      // 指令的定义
-      inserted: function (el, binding, vnode) {
-        let _this = vnode
-        console.log(vnode)
+  components: {
+    children
+  },
+  data () {
+    return {
+      data: {
+        name: 1,
+        name: {
+          n: 0
+        },
+        n: {
+          n: 0
+        }
       }
     }
   },
-  created () {
-    let _this = this
-    const timer = setInterval(() =>{
-      console.log(1) 
-      // 某些定时器操作 }, 500); 
-      // 通过$once来监听定时器，在beforeDestroy钩子可以被清除。 
-      _this.$once('hook:beforeDestroy', () => { 
-        console.log('beforeDestroy')
-        clearInterval(timer)}
-      )
-    }, 1000)
-  },
+  // created () {
+  //   let _this = this
+  //   const timer = setInterval(() =>{
+  //     console.log(1) 
+  //     // 某些定时器操作 }, 500); 
+  //     // 通过$once来监听定时器，在beforeDestroy钩子可以被清除。 
+  //     _this.$once('hook:beforeDestroy', () => { 
+  //       console.log('beforeDestroy')
+  //       clearInterval(timer)}
+  //     )
+  //   }, 1000)
+  // },
   methods: {
-    showImg (e) {
-      let src = e.target.src
-      this.$preview(src)
+    add () {
+      this.data.n = this.data.n + 1
     }
   }
 }

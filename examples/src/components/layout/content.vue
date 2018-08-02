@@ -42,14 +42,13 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     &__content{
-      width: 260px;
-      padding: 40px 20px 60px 60px;
-      height: 9000px;
+      width: 240px;
+      padding: 40px 20px 20px 20px;
+      box-sizing: border-box;
     }
   }
   &-content{
     padding-top: 60px;
-    padding-left: 270px;
     padding-bottom: 100px;
     box-sizing: border-box;
   }

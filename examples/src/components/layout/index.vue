@@ -28,9 +28,8 @@ export default {
     &-main{
       position: relative;
       padding: 2.2em 0;
-      max-width: 600px;
-      margin: 0 auto;
-      padding-left: 50px;
+      padding-left: 300px;
+      max-width: 870px;
     }
   }
 </style>

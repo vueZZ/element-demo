@@ -1,8 +1,10 @@
 import Hello from '../packages/hello/index.js'
+import top from '../packages/top/index.js'
 import preview from '../packages/preview/index.js'
 
 const components = [
-  Hello
+  Hello, 
+  top
 ]
 
 const install = function (Vue) {
@@ -21,5 +23,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  Hello
+  Hello,
+  top
 }
