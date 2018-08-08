@@ -1,0 +1,21 @@
+import axios from 'axios'
+
+axios.defaults.withCredentials = true
+const server = axios.create({
+  timeout: 15000,
+  baseURL: '/api'
+})
+
+server.interceptors.response.use(function (res) {
+  return Promise.reject(res)
+}, function (error) {
+  let msg = ''
+  if (error.response) {
+    msg = error.response.data.message || error.status
+  } else {
+    msg = error.message
+  }
+  return Promise.reject(msg)
+})
+
+export default server

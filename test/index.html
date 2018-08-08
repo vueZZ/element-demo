@@ -10,7 +10,13 @@
   
 </body>
 <script>
-  let i = 1 + '1'
-  console.log(i)
+function foo() {
+ function bar() {
+  console.log(this); 
+ } 
+ bar();
+}
+
+foo();
 </script>
 </html>

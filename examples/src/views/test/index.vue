@@ -26,18 +26,9 @@ export default {
       }
     }
   },
-  // created () {
-  //   let _this = this
-  //   const timer = setInterval(() =>{
-  //     console.log(1) 
-  //     // 某些定时器操作 }, 500); 
-  //     // 通过$once来监听定时器，在beforeDestroy钩子可以被清除。 
-  //     _this.$once('hook:beforeDestroy', () => { 
-  //       console.log('beforeDestroy')
-  //       clearInterval(timer)}
-  //     )
-  //   }, 1000)
-  // },
+  created () {
+    this.$api.getUserInfo()
+  },
   methods: {
     add () {
       this.data.n = this.data.n + 1

@@ -3,7 +3,7 @@ import top from '../packages/top/index.js'
 import preview from '../packages/preview/index.js'
 
 const components = [
-  Hello, 
+  Hello,
   top
 ]
 

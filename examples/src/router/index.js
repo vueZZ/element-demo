@@ -35,8 +35,6 @@ const registerRoute = (navConfig, isMobile) => {
 
 let route = registerRoute(navConfig)
 
-console.log(route)
-
 let routes = [
   {
     path: '/',
@@ -45,7 +43,5 @@ let routes = [
     children: route
   }
 ]
-
-console.log(routes)
 
 export default routes

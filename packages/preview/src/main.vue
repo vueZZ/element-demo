@@ -1,5 +1,5 @@
 <template>
-  <div class="z-preview" v-if="show">
+  <div class="z-preview" v-if="show" @click="handleColse">
     <img :src="src" alt="" class="z-preview__img">
     <i @click="close" class="z-preview__button">关闭</i>
   </div>
@@ -24,6 +24,12 @@ export default {
       this.show = false
       document.body.style.overflow = 'visible'
       this.$emit('close')
+    },
+    handleColse (e) {
+      let dom = e.target.className
+      if (dom === 'z-preview') {
+        this.close()
+      }
     }
   }
 }

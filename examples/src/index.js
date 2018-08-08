@@ -5,10 +5,12 @@ import zeroUI from 'src/index.js'
 import routes from './router/index.js'
 import 'normalize.css'
 import './styles/index.scss'
+import api from './api'
 
 Vue.use(zeroUI)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
+Vue.prototype.$api = api
 
 const router = new VueRouter({
   mode: 'history',
