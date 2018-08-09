@@ -11,7 +11,6 @@ export default {
     n: Number
   },
   created() {
-    console.log(this.$props)
   },
   methods: {
     add () {

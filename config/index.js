@@ -11,8 +11,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://yapi.demo.qunar.com/mock/11298/api/v1',
-        changeOrigin: true
+        // target: 'http://yapi.demo.qunar.com/mock/11298/api/v1',
+        target: 'http://yapi.demo.qunar.com/mock/9563',
+        changeOrigin: true,
+        pathRewrite: {'/api': ''}
       },
     },
 

@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>test</h2>
+    {{ obj }}
     <children v-bind.sync="data.n"></children>
     父：{{ data }}
     <button @click="add">add</button>
@@ -15,6 +16,7 @@ export default {
   },
   data () {
     return {
+      obj: '',
       data: {
         name: 1,
         name: {
@@ -27,7 +29,9 @@ export default {
     }
   },
   created () {
-    this.$api.getUserInfo()
+    this.$http('getUserInfo', { id: 1 }).then(a => {
+      this.obj = a
+    })
   },
   methods: {
     add () {

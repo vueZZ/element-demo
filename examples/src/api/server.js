@@ -7,7 +7,7 @@ const server = axios.create({
 })
 
 server.interceptors.response.use(function (res) {
-  return Promise.reject(res)
+  return Promise.resolve(res)
 }, function (error) {
   let msg = ''
   if (error.response) {

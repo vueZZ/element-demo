@@ -10,7 +10,7 @@ import api from './api'
 Vue.use(zeroUI)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
-Vue.prototype.$api = api
+Vue.prototype.$http = api
 
 const router = new VueRouter({
   mode: 'history',
