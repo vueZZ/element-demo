@@ -10,7 +10,7 @@ export default {
   props: {
     n: Number
   },
-  created() {
+  created () {
   },
   methods: {
     add () {
@@ -20,4 +20,3 @@ export default {
   }
 }
 </script>
-

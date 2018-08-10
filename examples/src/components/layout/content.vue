@@ -6,7 +6,19 @@
       </div>
     </div>
     <div class="main-content">
-       <router-view></router-view>
+      <!-- TODO:添加动画 -->
+      <keep-alive>
+          <router-view v-if="$route.meta.keepAlive" :key="$route.path"></router-view>
+      </keep-alive>
+      <router-view v-if="!$route.meta.keepAlive" :key="$route.path"></router-view>
+      <!-- <transition-group name="fade" tag="section" class="main-wrap">
+        <div :key="$route.path" data-id="$route.path">
+          <keep-alive>
+              <router-view v-if="$route.meta.keepAlive" :key="$route.path"></router-view>
+          </keep-alive>
+          <router-view v-if="!$route.meta.keepAlive" :key="$route.path"></router-view>
+        </div>
+      </transition-group> -->
     </div>
   </div>
 </template>
@@ -30,7 +42,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 .main{
   &-nav{
@@ -52,6 +63,18 @@ export default {
     padding-bottom: 100px;
     box-sizing: border-box;
   }
+  &-wrap{
+    transition: all 4.5s linear;
+  }
+}
+/* 显示 */
+.fade-in-enter-active{
+  transform: translateY(-40px);
+}
+/* 隐藏 */
+.fade-in-leave-active {
+  background-color: red;
+  transform: translateY(-40px);
+  opacity: 0;
 }
 </style>
-

@@ -6,7 +6,7 @@ const api = {
     },
     cehckResult: function (res) {
       return res.data
-    },
+    }
   },
   // api配置
   // ——————user——————

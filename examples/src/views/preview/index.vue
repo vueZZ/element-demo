@@ -24,7 +24,6 @@ export default {
   methods: {
     showImg (e) {
       // let a = 'wwww.baidu'
-      this.$preview(a)
       // this.$preview(e.target.src)
       // function set (n) {
       //   return new Promise((resolve, reject) => {
@@ -49,11 +48,9 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 .demo-img{
   width: 100px;
   height: 100px;
 }
 </style>
-

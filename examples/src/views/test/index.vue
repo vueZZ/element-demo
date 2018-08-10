@@ -18,7 +18,6 @@ export default {
     return {
       obj: '',
       data: {
-        name: 1,
         name: {
           n: 0
         },
@@ -29,9 +28,6 @@ export default {
     }
   },
   created () {
-    this.$http('getUserInfo', { id: 1 }).then(a => {
-      this.obj = a
-    })
   },
   methods: {
     add () {

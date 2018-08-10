@@ -9,12 +9,15 @@ const registerRoute = (navConfig, isMobile) => {
     if (nav.groups) {
       nav.groups.forEach(group => {
         group.list.forEach(nav => {
-          addRoute(nav)
+          if (nav.children) {
+            addRoute(nav)
+            nav.children.forEach(children => {
+              addRoute(children)
+            })
+          } else {
+            addRoute(nav)
+          }
         })
-      })
-    } else if (nav.children) {
-      nav.children.forEach(nav => {
-        addRoute(nav)
       })
     } else {
       addRoute(nav)
@@ -25,6 +28,8 @@ const registerRoute = (navConfig, isMobile) => {
     // 不同的设备环境引入对应的路由文件
     const component = require(`../views${page.path}/index.vue`).default
     route.push({
+      ...page,
+      name: page.title,
       path: '/component' + page.path,
       component: component
     })
@@ -42,6 +47,14 @@ let routes = [
     redirect: '/component/test',
     children: route
   }
+  // {
+  //   path: '/component/test/user',
+  //   component: require(`../views/test/user/index.vue`).default,
+  // },
+  // {
+  //   path: '/component/test/user/:id',
+  //   component: require(`../views/test/user/detail.vue`).default,
+  // }
 ]
 
 export default routes

@@ -2,7 +2,7 @@
   <div class="header">
     <router-link class="header-logo" to="/">
       <img src="../../assets/img/logo.png" alt="vue logo" class="header-logo__img">
-      <span>ZERO-UI</span>  
+      <span>ZERO-UI</span>
     </router-link>
     <div class="header-right">
       <span></span>

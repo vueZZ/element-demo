@@ -22,6 +22,19 @@
             {
               "path": "/hello",
               "title": "hello"
+            },
+            {
+              "path": "/test/user",
+              "title": "user",
+              "meta": {
+                "keepAlive": true
+              },
+              "children": [
+                {
+                  "path": "/test/user/detail",
+                  "title": "user详情"
+                }
+              ]
             }
           ]
         }
