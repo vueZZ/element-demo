@@ -16,15 +16,15 @@ export default {
       list: []
     }
   },
-  // beforeRouteLeave (to, from, next) {
-  //   console.log(this.$vnode.parent.componentInstance)
-  //   if (to.name === 'user详情') {
-  //     to.meta.keepAlive = true
-  //     next()
-  //   } else {
-  //     next()
-  //   }
-  // },
+  beforeRouteLeave (to, from, next) {
+    console.log(this.$vnode.parent.componentInstance)
+    if (to.name === 'user详情') {
+      to.meta.keepAlive = true
+      next()
+    } else {
+      next()
+    }
+  },
   methods: {
     toUser () {
       this.$router.push({

@@ -18,6 +18,7 @@ export default {
     }
   },
   created () {
+    console.log(1)
     this.$api('user.info', { id: 1 }).then(a => {
       this.user = a
     })

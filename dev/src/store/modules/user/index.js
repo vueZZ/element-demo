@@ -6,13 +6,6 @@ const user = {
     SET_userInfo (state, value) {
       state.info = value
     }
-  },
-  actions: {
-    changeUser (state, value) {
-      value = 'zz' + value
-  
-      state.info = value
-    }
   }
 }
 
